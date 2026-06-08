@@ -1,0 +1,540 @@
+<!-- Contoh struktur HTML -->
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anggieta | Personal Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+--pink:#ffd6e7;
+--pink-dark:#f6a8c5;
+--tosca:#88dfd6;
+--tosca-dark:#5accc1;
+--text:#444;
+--white:#fff;
+}
+
+body{
+background:linear-gradient(135deg,#fff7fb,#ffe4f1,#ddfffa);
+color:var(--text);
+}
+
+/* NAVBAR */
+
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(255,255,255,.9);
+backdrop-filter:blur(10px);
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 8%;
+z-index:1000;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+}
+
+.logo{
+font-size:24px;
+font-weight:700;
+color:#ff7eb6;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+text-decoration:none;
+color:#444;
+font-weight:500;
+transition:.3s;
+}
+
+nav a:hover{
+color:#ff7eb6;
+}
+
+/* HERO */
+
+.hero{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:120px 8%;
+gap:50px;
+flex-wrap:wrap;
+}
+
+.hero-text{
+flex:1;
+min-width:300px;
+}
+
+.hero-text h1{
+font-size:55px;
+margin-bottom:10px;
+}
+
+.hero-text span{
+color:#ff7eb6;
+}
+
+.hero-text p{
+line-height:1.8;
+margin:20px 0;
+}
+
+.btn{
+display:inline-block;
+padding:12px 25px;
+background:linear-gradient(135deg,var(--pink-dark),var(--tosca));
+border-radius:30px;
+text-decoration:none;
+color:white;
+font-weight:600;
+transition:.3s;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+.hero-image{
+flex:1;
+text-align:center;
+}
+
+.hero-image img{
+width:320px;
+border-radius:30px;
+box-shadow:0 20px 40px rgba(0,0,0,.1);
+}
+
+/* SECTION */
+
+section{
+padding:90px 10%;
+}
+
+.section-title{
+text-align:center;
+margin-bottom:50px;
+}
+
+.section-title h2{
+font-size:40px;
+color:#ff7eb6;
+}
+
+/* CARD */
+
+.card{
+background:white;
+padding:30px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+/* ABOUT */
+
+.about p{
+line-height:2;
+text-align:center;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.item{
+background:white;
+padding:25px;
+border-radius:20px;
+text-align:center;
+box-shadow:0 10px 25px rgba(0,0,0,.07);
+transition:.3s;
+}
+
+.item:hover{
+transform:translateY(-8px);
+}
+
+/* SKILLS BAR */
+
+.skill{
+margin-bottom:20px;
+}
+
+.skill-name{
+margin-bottom:8px;
+font-weight:600;
+}
+
+.bar{
+height:12px;
+background:#eee;
+border-radius:20px;
+overflow:hidden;
+}
+
+.fill{
+height:100%;
+background:linear-gradient(90deg,var(--pink-dark),var(--tosca));
+}
+
+/* CONTACT */
+
+form{
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:600px;
+margin:auto;
+}
+
+input,textarea{
+padding:15px;
+border:none;
+border-radius:15px;
+background:#fff;
+box-shadow:0 5px 15px rgba(0,0,0,.05);
+}
+
+textarea{
+height:150px;
+resize:none;
+}
+
+button{
+border:none;
+cursor:pointer;
+}
+
+/* SOCIAL */
+
+.social{
+text-align:center;
+}
+
+.social a{
+font-size:20px;
+text-decoration:none;
+color:#ff7eb6;
+font-weight:600;
+}
+
+/* MAP */
+
+iframe{
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* FOOTER */
+
+footer{
+padding:30px;
+text-align:center;
+background:white;
+margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero-text h1{
+font-size:40px;
+}
+
+nav ul{
+gap:12px;
+font-size:14px;
+}
+
+.hero-image img{
+width:250px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+
+<div class="logo">ANGGIETA</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#hobbies">Hobbies</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#wishlist">Wishlist</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</nav>
+
+<!-- HOME -->
+
+<section class="hero" id="home">
+
+<div class="hero-text">
+
+<h1>Hello, I'm <span>Anggieta</span></h1>
+
+<p>
+Business Management Student who is passionate about creativity,
+self-development, and continuous learning.
+I enjoy exploring new ideas and improving my skills through
+various experiences.
+</p>
+
+<a href="#about" class="btn">Explore More</a>
+
+</div>
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=600"
+alt="Profile">
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<div class="section-title">
+<h2>About Me</h2>
+</div>
+
+<div class="card about">
+
+<p>
+Hello! My name is Anggieta.
+I am a Business Management student who is passionate about learning,
+creativity, and self-development.
+
+I enjoy exploring new ideas, improving my skills,
+and challenging myself through different experiences.
+
+I believe that every small step contributes to personal growth
+and future success.
+
+My goal is to continuously develop both my academic and professional
+abilities while creating meaningful opportunities for myself and others.
+</p>
+
+</div>
+
+</section>
+
+<!-- HOBBIES -->
+
+<section id="hobbies">
+
+<div class="section-title">
+<h2>My Hobbies</h2>
+</div>
+
+<div class="grid">
+
+<div class="item">
+<h3>Designing</h3>
+<p>Creating creative visual content and layouts.</p>
+</div>
+
+<div class="item">
+<h3>Watching Movies</h3>
+<p>Exploring stories and cinematic experiences.</p>
+</div>
+
+<div class="item">
+<h3>Listening to Music</h3>
+<p>Enjoying various music genres and relaxing.</p>
+</div>
+
+<div class="item">
+<h3>Singing</h3>
+<p>Expressing creativity through music.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<div class="section-title">
+<h2>My Skills</h2>
+</div>
+
+<div class="card">
+
+<div class="skill">
+<div class="skill-name">Canva Design</div>
+<div class="bar"><div class="fill" style="width:90%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Business Management</div>
+<div class="bar"><div class="fill" style="width:85%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Communication</div>
+<div class="bar"><div class="fill" style="width:88%"></div></div>
+</div>
+
+<div class="skill">
+<div class="skill-name">Teamwork</div>
+<div class="bar"><div class="fill" style="width:92%"></div></div>
+</div>
+
+</div>
+
+</section>
+
+<!-- WISHLIST -->
+
+<section id="wishlist">
+
+<div class="section-title">
+<h2>My Wishlist</h2>
+</div>
+
+<div class="grid">
+
+<div class="item">
+Graduate with Excellent Grades
+</div>
+
+<div class="item">
+Travel to New Places
+</div>
+
+<div class="item">
+Improve My Skills Every Year
+</div>
+
+<div class="item">
+Make My Parents Proud
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<div class="section-title">
+<h2>Contact Me</h2>
+</div>
+
+<form id="contactForm">
+
+<input type="text" placeholder="Your Name" required>
+
+<input type="email" placeholder="Your Email" required>
+
+<textarea placeholder="Your Message"></textarea>
+
+<button class="btn" type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<!-- SOCIAL -->
+
+<section>
+
+<div class="section-title">
+<h2>Instagram</h2>
+</div>
+
+<div class="social">
+<a href="https://instagram.com/fernnda.t" target="_blank">
+@fernnda.t
+</a>
+</div>
+
+</section>
+
+<!-- MAP -->
+
+<section>
+
+<div class="section-title">
+<h2>Location</h2>
+</div>
+
+<iframe
+src="https://www.google.com/maps?q=Universitas+Katolik+Widya+Mandala+Surabaya+Kampus+Dinoyo&output=embed"
+width="100%"
+height="350">
+</iframe>
+
+</section>
+
+<footer>
+
+<p>© 2025 Anggieta Personal Website</p>
+
+</footer>
+
+<script>
+
+const form = document.getElementById("contactForm");
+
+form.addEventListener("submit", function(e){
+
+e.preventDefault();
+
+alert("Thank you! Your message has been sent.");
+
+form.reset();
+
+});
+
+</script>
+
+</body>
+</html>
+```
